@@ -90,9 +90,25 @@ The running scrips will create the `exp` folder for all the experimental results
 
 ## Object Detection
 ### 1. Installation
+```
+mim install "mmcv==2.1.0"
+pip install "mmdet==3.2.0"
+pip install pycocotools
+```
 ### 2. Datasets Preparation
+```
+wget https://automl-mm-bench.s3.amazonaws.com/object_detection/benchmark/AutoMLDetBench.zip
+```
+And unzip this somewhere as `<Data_Dir>`.
 ### 3. Run the Benchmark
+```
+python3 <Installed_Dir>/autogluon/examples/automm/object_detection/benchmarking.py \
+   --benchmark_root <Data_Dir>/AutoMLDetBench \
+   --dataset_name <dataset_name> \
+   --seed <seed>
+```
 ### 4. Getting Results
+Results will be printed.
 
 ## Semantic Segmentation
 
